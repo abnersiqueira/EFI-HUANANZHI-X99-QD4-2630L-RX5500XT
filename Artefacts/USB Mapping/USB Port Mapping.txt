@@ -1,0 +1,21 @@
+## Internal [255]
+
+
+
+## USB 2.0 Type A [0]
+
+
+
+## USB 3.0 Type A [3]
+
+
+
+## USB 2.0 Type C [8]
+
+
+
+## USB 3.0 Type C [9] - With internal switch
+
+
+
+## USB 3.0 Type C [10] - Without internal switch

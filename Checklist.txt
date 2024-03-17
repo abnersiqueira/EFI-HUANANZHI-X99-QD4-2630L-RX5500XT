@@ -1,0 +1,132 @@
+# Resume do SETUP
+
+Tipo:			Desktop | Notebook | Mini PC
+Mobo: 			xxx
+CPU: 			xxx
+Memória:		xxx
+dGPU/iGPU:		xxx
+Audio Codec:	xxx
+Ethernet:		xxx
+Wireless/BT:	xxx
+Storage: 		xxx
+
+# Checklist - Create a Perfect EFI
+
+[ ] Report Aida64 - Hardware
+
+[ ] Update BIOS to latest Version (if necessary)
+[ ] BIOS Settings
+
+[ ] Download and Install Apps for Create a EFI
+	[ ] Python 3.9.9
+	[ ] ProperTree
+	[ ] GenSMBIOS
+	[ ] Sublime Text
+	[ ] SSDTTime
+	[ ] iASL Tools
+
+[ ] Downloads: EFI BASE	
+[ ] Downloads: Kexts
+
+[ ] Create Basic EFI
+	[ ] Extract BASE EFI
+	[ ] SSDTTime para Basic ACPIs (HPET, EC, USBX, AWAC, RTC e RHUB/Reset USB)
+	[ ] Kexts
+	[ ] GenSMBIOS
+	[ ] boot-args (-v, i225, pikera, etc)
+	[ ] Enable iGPU (if Intel 10th gen or older)
+	[ ] XhciPortLimit
+	[ ] Rename USB Controllers
+	[ ] Mapping CPU Cores [AMD Only]
+
+[ ] Download Recovery OS [macrecovery]
+[ ] Copiar arquivos para pendrive (EFI + com.apple.boot.recovery)
+
+[ ] Partition Disk for Dual Boot
+
+[ ] Install macOS with Recovery Image
+	[ ] Test Internet with Recovery
+	[ ] Disk Utility > View > Show All Devices (Format in APFS + GUID Partition Map)
+
+[ ] Initial Setup (don't logon with Apple ID and don't restore any backups)
+[ ] Gatekeeper [sudo spctl --master-disable]
+
+[ ] Mapping USBs [USBMap.command]
+[ ] XhciPortLimit: FALSE
+[ ] DELETE: SSDT-RHUB.aml
+
+# Tuning EFI
+
+[ ] CPU-NAME Corpnewt
+
+[ ] Extract ACPI/DSDT from Windows
+[ ] Extract ACPI/DSDT from Opencore (SysReport)
+
+[ ] Additional SSDTs
+	[ ] SBUS/MCHC
+	[ ] GPRW
+	[ ] USBW
+	[ ] DMAR & THUNDERBOLT
+
+[ ] Device Properties
+	[ ] SSD/NVME External/Internal
+	[ ] Ethernet
+	[ ] Wireless/BT
+
+[ ] Configurar suporte ao som/audio
+	[ ] AppleALC + layout-id in DeviceProperties
+
+[ ] Remove Verbose Mode (-v)
+[ ] Install EFI in Internal Disks
+[ ] ScanPolicy [2687747]
+[ ] HideAuxiliary
+[ ] ShowPicker & Timeout - 5s
+[ ] Play Boot Chime
+[ ] LauncherOption (Full)
+
+# Monitoramento para validações
+
+[ ] Monitores: Stats
+[ ] Monitores: Intel Power Gadget
+
+# Benchmarks e Testes
+
+[ ] Benchmark: Amorphous Disk Speed Test
+[ ] Benchmark: Amorphous Memory Speed Test
+[ ] Benchmark: Blackmagic Disk Speed Test
+[ ] Benchmark: Blackmagic RAW Speed Test
+[ ] Benchmark: Cinebench R23
+[ ] Benchmark: Endurance
+[ ] Benchmark: Geekbench 5
+[ ] Benchmark: Geekbench 6
+[ ] Benchmark: Network Speed Test
+[ ] Benchmark: Intel Power Gadget
+
+# Coleta de informações e evidências para revisão
+
+[ ] Coleta Info: Hackintool
+[ ] Coleta Info: About This Mac + Neofetch
+[ ] Coleta Info: System Report
+[ ] Coleta Info: IOREG Dump
+[ ] Coleta Info: VideoProc
+[ ] Coleta Info: DSDT Patched in macOS
+[ ] Coleta Info: Geekbench
+
+# Criação de instalador automático de EFI/Opencore
+
+[ ] Opencore Packager
+
+## BIOS Settings
+
+[Press DEL for ENTER BIOS]
+
+	BIOS SETTINGS HERE
+
+## GitHub
+
+git init
+git add .
+git commit -m "EFI for Hackintosh"
+git branch -M main
+git remote add origin URL-GIT
+git push -u origin main
